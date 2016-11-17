@@ -15,7 +15,7 @@ ping 10.0.0.2    [or whatever IP the bbb is assigned]
 
 Hit the boot button to flash a USR LED (interrupt sanity check)
  
-Input comes by way of ethernet_input() in etharp.c and the main loop below.  
+Input comes by way of ethernet_input() in etharp.c and the main() loop  
 Output goes by way of tcp_write() in tcp_out.c and echod.c .  
 See rawapi.txt in /doc for interface info.  Most of the TI ethernet middleware 
 is in cpswif.c
@@ -23,9 +23,6 @@ is in cpswif.c
 lwIP is a Picasso!  It is quite intricate so I did not touch it.  
 The TI starterware drivers are pretty good also and required very little 
 tweaking to build with GNU.  Changes are marked with "// n!"
-
-The full lwIP suite is next.  It needs the full FAT32 file system so it 
-will take months.  In the mean time you have UDP functionality.  
 
 Use a jtag cable to load/boot the BBB, but you can boot from MMC.
 
